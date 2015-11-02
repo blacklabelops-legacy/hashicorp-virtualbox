@@ -23,7 +23,7 @@ RUN wget --directory-prefix=/tmp https://dl.bintray.com/mitchellh/packer/packer_
     unzip /tmp/otto_${OTTO_VERSION}_linux_amd64.zip -d /usr/local/bin
 
 # install Virtualbox
-ENV VIRTUALBOX_VERSION=5.0.6_103037_el7-1
+ENV VIRTUALBOX_VERSION=5.0.8_103449_el7-1
 RUN mkdir -p /opt/virtualbox && \
     cd /etc/yum.repos.d/ && \
     wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo && \
