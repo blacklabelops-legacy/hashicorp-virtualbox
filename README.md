@@ -1,5 +1,7 @@
 Container stuffed with Hashicorp Otto, Vagrant and Packer with Virtualbox!
 
+Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
+
 Virtualbox base container with Hashicorp tool stack!
 
 Requirements:
