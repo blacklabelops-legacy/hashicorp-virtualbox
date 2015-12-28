@@ -1,4 +1,4 @@
-FROM blacklabelops/centos:7.2.1511
+FROM blacklabelops/centos
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # Need root to build image
