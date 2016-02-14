@@ -6,7 +6,7 @@ Virtualbox base container with Hashicorp tool stack!
 
 Requirements:
 
-  * Centos 7.1503 dedicated host without any virtualization around.
+  * Centos7 dedicated host without any virtualization around.
   * Linux only, Virtualbox will not run inside Virtualbox or boot2docker!
   * Host machine must have working installation of Virtualbox.
   * Host machine should have same Virtualbox version.
@@ -18,6 +18,8 @@ Software:
   * Otto
   * Vagrant
   * Packer
+  * Terraform
+  * Atlas Upload Client
 
 # Make It Short!
 
