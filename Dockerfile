@@ -9,14 +9,13 @@ RUN yum install -y \
       unzip \
       tar \
       gzip \
-      wget && \
-    yum clean all && rm -rf /var/cache/yum/*
+      wget
 
 # install Hashicorp tools
-RUN export PACKER_VERSION=0.10.0 && \
-    export VAGRANT_VERSION=1.8.1 && \
+RUN export PACKER_VERSION=0.12.1 && \
+    export VAGRANT_VERSION=1.9.1 && \
     export OTTO_VERSION=0.2.0 && \
-    export TERRAFORM_VERSION=0.6.14 && \
+    export TERRAFORM_VERSION=0.8.2 && \
     export ATLAS_CLI_VERSION=0.2.0 && \
     wget --directory-prefix=/tmp https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip && \
     unzip /tmp/packer_${PACKER_VERSION}_linux_amd64.zip -d /usr/local/bin && \
@@ -27,9 +26,7 @@ RUN export PACKER_VERSION=0.10.0 && \
     wget --directory-prefix=/tmp https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin && \
     wget --directory-prefix=/tmp https://github.com/hashicorp/atlas-upload-cli/releases/download/v${ATLAS_CLI_VERSION}/atlas-upload-cli_${ATLAS_CLI_VERSION}_linux_amd64.tar.gz && \
-    ls -All /tmp && \
-    tar xzf /tmp/atlas-upload-cli_${ATLAS_CLI_VERSION}_linux_amd64.tar.gz -C /usr/local/bin && \
-    rm -rf /tmp/*
+    tar xzf /tmp/atlas-upload-cli_${ATLAS_CLI_VERSION}_linux_amd64.tar.gz -C /usr/local/bin
 
 # install Virtualbox (Example version: 5.0.14_105127_el7-1)
 RUN export VIRTUALBOX_VERSION=latest && \
@@ -44,8 +41,4 @@ RUN export VIRTUALBOX_VERSION=latest && \
       then yum install -y VirtualBox-5.0 ; \
       else yum install -y VirtualBox-5.0-${VIRTUALBOX_VERSION} ; \
     fi && \
-    yum autoremove -y \
-      tar \
-      unzip \
-      wget && \
-    yum clean all && rm -rf /var/cache/yum/*
+    yum clean all && rm -rf /var/cache/yum/* && rm -rf /tmp/*
