@@ -1,7 +1,5 @@
 Container stuffed with Hashicorp Otto, Vagrant and Packer with Virtualbox!
 
-Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
-
 Virtualbox base container with Hashicorp tool stack!
 
 Requirements:
@@ -34,6 +32,10 @@ $ docker run --rm -it \
 ~~~~
 
 > Mounts the hosts binaries. MUST use privileged mode, MUST mount host device.
+
+# Support
+
+Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](http://support.blacklabelops.com)
 
 # References
 
